@@ -22,6 +22,27 @@ A dynamic web application that provides real-time weather information using the 
 1. Clone the repository to your local machine:
    ```bash
    git clone https://github.com/yourusername/weather-app.git
+2. Open index.html in your web browser.
+
+3. Enter a city name in the search box to view the weather information.
 
 
+Demo
+Link to Live Demo
+
+Contributing
+Contributions are welcome! If you have suggestions or improvements, please create an issue or submit a pull request.
+
+License
+This project is licensed under the MIT License. See the LICENSE file for more details.
+
+Acknowledgments
+Thanks to OpenWeatherMap for providing the weather data API.
+
+
+
+### Instructions:
+- Replace `yourusername` with your GitHub username.
+- Add a link to a live demo if available.
 - Feel free to customize any section to better fit your project!
+
