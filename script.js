@@ -164,16 +164,25 @@ const onError = (error) => {
 
 async function bgChanger() {
   const bg = document.querySelector(".bg video");
-  const videoSources = ['images/bg1.mp4', 'images/bg2.mp4', 'images/bg1.mp4']; // Array of video sources
+  const videoSources =
+    ['images/bg1.mp4',
+      'images/bg2.mp4',
+      'images/bg3.mp4',
+      'images/bg4.mp4',
+      'images/bg5.mp4',
+      'images/bg6.mp4',
+      'images/bg7.mp4'
+    ];
+  // Array of video sources
   let currentIndex = 0;
 
   setInterval(() => {
     currentIndex = (currentIndex + 1) % videoSources.length; // Cycle through the sources
     bg.src = videoSources[currentIndex];
+    bg.style.src.trans
     bg.load();  // Reload the video to apply the new source
     bg.play();  // Play the new video
-  }, 5000); // Change every 10 seconds
+  }, 11000); // Change every 10 seconds
 }
-
 bgChanger();
 getLocation();
