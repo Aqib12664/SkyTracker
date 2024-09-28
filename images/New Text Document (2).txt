@@ -1,0 +1,6 @@
+
+
+ffmpeg -i bg7.mp4 -ss 0 -t 5 -c:v libvpx-vp9 -b:v 1M -c:a libopus bg7.webm
+
+
+

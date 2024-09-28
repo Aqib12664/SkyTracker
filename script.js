@@ -160,4 +160,62 @@ const onSuccess = (position) => {
 const onError = (error) => {
   alert("Unable to retrieve your location");
 };
+
+
+// async function bgChanger() {
+//   const bg = document.querySelector(".bg video");
+//   const videoSources =
+//     ['images/bg1.mp4',
+//       'images/bg2.mp4',
+//       'images/bg3.mp4',
+//       'images/bg4.mp4',
+//       'images/bg5.mp4',
+//       'images/bg6.mp4',
+//       'images/bg7.mp4'
+
+//     ];
+//   // Array of video sources
+//   let currentIndex = 0;
+
+//   setInterval(() => {
+//     currentIndex = (currentIndex + 1) % videoSources.length; // Cycle through the sources
+//     bg.src = videoSources[currentIndex];
+
+//     bg.load();  // Reload the video to apply the new source
+//     bg.play();  // Play the new video
+//   }, 1000); // Change every 10 seconds
+// }
+
+
+async function bgChanger() {
+  const bg = document.querySelector(".bg video");
+
+  const videoSources = [
+    { webm: 'images/bg1.webm', mp4: 'images/bg1.mp4' },
+    { webm: 'images/bg2.webm', mp4: 'images/bg2.mp4' },
+    { webm: 'images/bg3.webm', mp4: 'images/bg3.mp4' },
+    { webm: 'images/bg4.webm', mp4: 'images/bg4.mp4' },
+    { webm: 'images/bg5.webm', mp4: 'images/bg5.mp4' },
+    { webm: 'images/bg6.webm', mp4: 'images/bg6.mp4' },
+    { webm: 'images/bg7.webm', mp4: 'images/bg7.mp4' }
+  ];
+
+  let currentIndex = 0;
+
+  setInterval(() => {
+    currentIndex = (currentIndex + 1) % videoSources.length; // Cycle through the sources
+
+    // Check if the browser supports WebM, otherwise fallback to MP4
+    if (bg.canPlayType('video/webm')) {
+      bg.src = videoSources[currentIndex].webm;
+    } else {
+      bg.src = videoSources[currentIndex].mp4;
+    }
+
+    bg.load();  // Reload the video to apply the new source
+    bg.play();  // Play the new video
+  }, 11000); // Change every 10 seconds
+}
+
+bgChanger();
 getLocation();

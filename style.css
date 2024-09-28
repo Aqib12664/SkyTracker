@@ -20,7 +20,7 @@
 }
 
 body {
-    background: url(images/background.webp);
+
     display: flex;
     align-items: center;
     justify-content: center;
@@ -35,8 +35,8 @@ body {
 .container {
     position: relative;
     border-radius: 16px;
-    background: rgba(255, 255, 255, .1);
-    backdrop-filter: blur(32px);
+    background: rgba(255, 255, 255, .01);
+    backdrop-filter: blur(7px);
     border: 2px solid rgba(255, 255, 255, .2);
     width: 400px;
     height: 85px;
@@ -293,4 +293,23 @@ body {
 .active-clone#clone-info-wind span {
     transform: translateY(0%);
     transition-delay: 1s;
+}
+
+
+
+
+
+/* Media Querries  */
+@media (max-width: 768px) {
+    .container {
+        width: 100%;
+        height: auto;
+        padding: 20px;
+    }
+    .search-box input {
+        font-size: 18px;
+    }
+    .weather-box .temperature {
+        font-size: 48px;
+    }
 }
